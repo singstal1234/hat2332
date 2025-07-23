@@ -31,32 +31,11 @@ export default function Leaderboard(props) {
                 refferalCount: el[1],
                 name: r2.data,
               });
-              newLd.push({
-                userId: el[0],
-                refferalCount: el[1],
-                name: r2.data,
-              });
-              newLd.push({
-                userId: el[0],
-                refferalCount: el[1],
-                name: r2.data,
-              });
-              newLd.push({
-                userId: el[0],
-                refferalCount: el[1],
-                name: r2.data,
-              });
-              newLd.push({
-                userId: el[0],
-                refferalCount: el[1],
-                name: r2.data,
-              });
             } catch (e) {
               console.log(e);
             }
           })
         );
-
         console.log(newLd); // Теперь здесь будут все данные
         setLd(newLd); // Не забудьте обновить состояние
       })
@@ -82,10 +61,6 @@ export default function Leaderboard(props) {
               const r2 = await axios.get(
                 `https://singstal1234.pythonanywhere.com/photo/user_name?telegram_id=${el}`
               );
-              newLd.push({
-                userId: el,
-                name: r2.data,
-              });
               newLd.push({
                 userId: el,
                 name: r2.data,
@@ -179,10 +154,13 @@ export default function Leaderboard(props) {
                       />
                       <span className="username">{el.name}</span>
                     </div>
-                    <div
-                      className="gift"
-                      style={{ background: `url(${getGift(i)})` }}
-                    ></div>
+                    <div className="gift-block">
+                      <span className="ref-count">42</span>
+                      <div
+                        className="gift"
+                        style={{ background: `url(${getGift(i)})` }}
+                      ></div>
+                    </div>
                   </div>
                 );
               })

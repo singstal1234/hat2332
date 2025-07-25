@@ -37,6 +37,7 @@ export default function Leaderboard(props) {
           })
         );
         console.log(newLd); // Теперь здесь будут все данные
+        newLd.sort((el1, el2) => el2.refferalCount - el1.refferalCount);
         setLd(newLd); // Не забудьте обновить состояние
       })
       .catch((e) => {

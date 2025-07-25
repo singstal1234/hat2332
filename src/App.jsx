@@ -58,9 +58,15 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const [id, setId] = useState(0);
+
   useEffect(() => {
     console.log(window);
     console.log(window.Telegram);
+  }, []);
+
+  useEffect(() => {
+    setId(window.Telegram.WebApp.initDataUnsafe.user.id);
   }, []);
 
   return (
@@ -72,7 +78,7 @@ function App() {
         </>
       ) : (
         <>
-          <Leaderboard onBack={() => setPage(0)} />
+          <Leaderboard id={id} onBack={() => setPage(0)} />
         </>
       )}
     </>

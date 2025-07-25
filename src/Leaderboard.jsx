@@ -47,7 +47,7 @@ export default function Leaderboard(props) {
   useEffect(() => {
     axios
       .get(
-        `https://singstal1234.pythonanywhere.com/refferal/my?telegram_id=${6340905890}`
+        `https://singstal1234.pythonanywhere.com/refferal/my?telegram_id=${props.id}`
       )
       .then(async (r) => {
         // Добавляем async здесь
@@ -79,16 +79,14 @@ export default function Leaderboard(props) {
       });
   }, []);
 
-  const [id, setId] = useState(0);
+  // useEffect(() => {
+  //   setId(window.Telegram.WebApp.initData.user.id);
+  // }, window.Telegram.WebApp.initData.user);
 
-  useEffect(() => {
-    setId(window.Telegram.WebApp.initData.user.id);
-  }, window.Telegram.WebApp.initData.user);
-
-  useEffect(() => {
-    console.log(window);
-    console.log(window.Telegram);
-  }, []);
+  // useEffect(() => {
+  //   console.log(window);
+  //   console.log(window.Telegram);
+  // }, []);
 
   const getGift = (i) => {
     if (i == 0) return gift1;
@@ -198,7 +196,7 @@ export default function Leaderboard(props) {
         <a
           className="share"
           href={`https://t.me/share/url?url=${`https://t.me/njdfjfewifis_bot?start=${btoa(
-            id.toString()
+            props.id.toString()
           )}`}&text=Follow my refferal link!`}
           // onClick={() => {
           //   window.Telegram.WebApp.shareMessage(

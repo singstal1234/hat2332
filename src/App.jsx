@@ -58,6 +58,11 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    console.log(window);
+    console.log(window.Telegram);
+  }, []);
+
   return (
     <>
       {page == 0 ? (

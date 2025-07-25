@@ -155,7 +155,7 @@ export default function Leaderboard(props) {
                       <span className="username">{el.name}</span>
                     </div>
                     <div className="gift-block">
-                      <span className="ref-count">42</span>
+                      <span className="ref-count">{el.refferalCount}</span>
                       <div
                         className="gift"
                         style={{ background: `url(${getGift(i)})` }}

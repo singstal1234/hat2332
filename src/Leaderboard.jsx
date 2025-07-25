@@ -79,6 +79,12 @@ export default function Leaderboard(props) {
       });
   }, []);
 
+  const [id, setId] = useState(0);
+
+  useEffect(() => {
+    setId(window.Telegram.WebApp.initData.user.id);
+  }, window.Telegram.WebApp.initData.user);
+
   const getGift = (i) => {
     if (i == 0) return gift1;
     if (i == 1) return gift2;
@@ -187,7 +193,7 @@ export default function Leaderboard(props) {
         <a
           className="share"
           href={`https://t.me/share/url?url=${`https://t.me/njdfjfewifis_bot?start=${btoa(
-            window.Telegram.WebApp.initDataUnsafe.user.id.ToString()
+            id.ToString()
           )}`}&text=Follow my refferal link!`}
           // onClick={() => {
           //   window.Telegram.WebApp.shareMessage(

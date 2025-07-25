@@ -193,7 +193,7 @@ export default function Leaderboard(props) {
         <a
           className="share"
           href={`https://t.me/share/url?url=${`https://t.me/njdfjfewifis_bot?start=${btoa(
-            id.ToString()
+            id.toString()
           )}`}&text=Follow my refferal link!`}
           // onClick={() => {
           //   window.Telegram.WebApp.shareMessage(

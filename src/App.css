@@ -236,9 +236,10 @@ body {
   outline: none;
   border: 0.5px solid white;
   border-radius: 5px;
-  width: 131px;
+  /* width: 131px; */
   position: absolute;
   bottom: 97px;
   left: 50%;
   transform: translateX(-50%);
+  text-decoration: none;
 }

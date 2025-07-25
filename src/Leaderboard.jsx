@@ -195,7 +195,7 @@ export default function Leaderboard(props) {
         </div>
         <a
           className="share"
-          href={`https://t.me/share/url?url=${`https://t.me/njdfjfewifis_bot?start=${btoa(
+          href={`https://t.me/share/url?url=${`https://t.me/HatCase_bot?start=${btoa(
             props.id.toString()
           )}`}&text=Follow my refferal link!`}
           // onClick={() => {

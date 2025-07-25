@@ -184,18 +184,21 @@ export default function Leaderboard(props) {
                 );
               })}
         </div>
-        <button
+        <a
           className="share"
-          onClick={() => {
-            window.Telegram.WebApp.shareMessage(
-              `Follow my refferal link! https://t.me/njdfjfewifis_bot?start=${btoa(
-                window.Telegram.WebApp.initDataUnsafe.user.id.ToString()
-              )}`
-            );
-          }}
+          href={`https://t.me/share/url?url=${`https://t.me/njdfjfewifis_bot?start=${btoa(
+            window.Telegram.WebApp.initDataUnsafe.user.id.ToString()
+          )}`}&text=Follow my refferal link!`}
+          // onClick={() => {
+          //   window.Telegram.WebApp.shareMessage(
+          //     `Follow my refferal link! https://t.me/njdfjfewifis_bot?start=${btoa(
+          //       window.Telegram.WebApp.initDataUnsafe.user.id.ToString()
+          //     )}`
+          //   );
+          // }}
         >
           Share
-        </button>
+        </a>
       </div>
     </div>
   );

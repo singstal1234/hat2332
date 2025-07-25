@@ -63,9 +63,9 @@ function App() {
   useEffect(() => {
     console.log(window);
     console.log(window.Telegram);
-  }, []);
-
-  useEffect(() => {
+    console.log(window.Telegram.WebApp);
+    console.log(window.Telegram.WebApp.initDataUnsafe);
+    console.log(window.Telegram.WebApp.initDataUnsafe.user);
     setId(window.Telegram.WebApp.initDataUnsafe.user.id);
   }, []);
 

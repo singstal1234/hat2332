@@ -85,6 +85,11 @@ export default function Leaderboard(props) {
     setId(window.Telegram.WebApp.initData.user.id);
   }, window.Telegram.WebApp.initData.user);
 
+  useEffect(() => {
+    console.log(window);
+    console.log(window.Telegram);
+  }, []);
+
   const getGift = (i) => {
     if (i == 0) return gift1;
     if (i == 1) return gift2;

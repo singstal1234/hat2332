@@ -16,7 +16,7 @@ function App() {
   const [hours, setHours] = useState("00:00:00");
 
   useEffect(() => {
-    const targetDate = new Date("August 1, 2025 12:00:00").getTime();
+    const targetDate = new Date("August 8, 2025 12:00:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -61,11 +61,11 @@ function App() {
   const [id, setId] = useState(0);
 
   useEffect(() => {
-    console.log(window);
-    console.log(window.Telegram);
-    console.log(window.Telegram.WebApp);
-    console.log(window.Telegram.WebApp.initDataUnsafe);
-    console.log(window.Telegram.WebApp.initDataUnsafe.user);
+    // console.log(window);
+    // console.log(window.Telegram);
+    // console.log(window.Telegram.WebApp);
+    // console.log(window.Telegram.WebApp.initDataUnsafe);
+    // console.log(window.Telegram.WebApp.initDataUnsafe.user);
     setId(window.Telegram.WebApp.initDataUnsafe.user.id);
   }, []);
 

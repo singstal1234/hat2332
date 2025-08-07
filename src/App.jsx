@@ -16,7 +16,7 @@ function App() {
   const [hours, setHours] = useState("00:00:00");
 
   useEffect(() => {
-    const targetDate = new Date("August 8, 2025 12:00:00").getTime();
+    const targetDate = new Date("August 8, 2025 17:00:00").getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
